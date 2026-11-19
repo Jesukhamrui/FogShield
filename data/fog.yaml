@@ -1,0 +1,6 @@
+path: C:\Users\jesuk\OneDrive\Documents\webgit\fog-vehicle-detection\data\yolo
+train: images/train
+val: images/val
+names:
+  0: person
+  1: vehicle

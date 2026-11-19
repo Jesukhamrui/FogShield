@@ -1,0 +1,25 @@
+# Default configuration. Override with --config or individual CLI flags.
+dehazer:
+  name: dcp            # dcp | onnx
+  patch: 15
+  omega: 0.95
+  t0: 0.1
+  onnx_path: models/dehazer.onnx
+  input_size: 512
+
+detector:
+  weights: models/yolo_fog.pt   # fine-tuned on hazed data; falls back to yolov8n.pt for COCO
+  conf: 0.25
+  imgsz: 640
+  device: null                  # e.g. "cpu", "0"
+
+fog_synthesis:
+  beta_range: [0.6, 1.6]
+  airlight_range: [0.8, 1.0]
+  seed: 42
+
+paths:
+  clear_dir: data/clear
+  hazed_dir: data/hazed
+  annotations: data/annotations.json
+  results_dir: results

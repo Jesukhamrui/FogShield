@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+runs/
+models/*.pt
+models/*.onnx
+data/clear/*
+data/hazed/*
+!data/clear/.gitkeep
+!data/hazed/.gitkeep
+results/*
+!results/.gitkeep
